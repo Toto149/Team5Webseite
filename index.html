@@ -1,0 +1,151 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<div class="container">
+  <!-- Add your site or application content here -->
+  <h1 class="title"> Unsere Webseite über Strings und deren Methoden
+  </h1>
+
+
+
+
+  <p> String ist ein Datentyp zur Darstellung von Zeichenketten. String ist kein primitiver Datentyp da es von Objekt erbt.
+  Die Stringklasse hat viele statische als auch objekt Methoden, welche das bearbeiten von Strings ermöglichen. Strings sind
+  immutable, dass heißt die meisten Funktionen welche Veränderungen durchführen geben tatsächlich nur eine veränderte Kopie des Ausgangstrings wieder</p>
+
+
+  <table class="table">
+    <tr>
+      <th>Method</th>
+      <th>Beschreibung</th>
+      <th>Rückgabetyp</th>
+    </tr>
+    <tr>
+      <td><a href="#charAt">charAt()</a></td>
+      <td>Gibt das Zeichen am angegebenen Index (Position) zurück</td>
+      <td>char</td>
+    </tr>
+    <tr>
+      <td><a href="#compareTo">compareTo()</a></td>
+      <td>Vergleicht zwei Zeichenfolgen lexikografisch</td>
+      <td>int</td>
+    </tr>
+    <tr>
+      <td><a href="#concat">concat()</a></td>
+      <td>Hängt eine Zeichenfolge an das Ende einer anderen Zeichenfolge an</td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><a href="#contains">contains()</a></td>
+      <td>Überprüft, ob eine Zeichenfolge eine Zeichenfolge enthält</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><a href="#equals">equals()</a></td>
+      <td>Vergleicht zwei Zeichenfolgen. Gibt true zurück, wenn die Zeichenfolgen gleich sind, andernfalls false</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td><a href="#indexOf">indexOf()</a></td>
+      <td>Gibt die Position des ersten gefundenen Vorkommens angegebener Zeichen in einer Zeichenfolge zurück</td>
+      <td>int</td>
+    </tr>
+    <tr>
+      <td><a href="#length">length()</a></td>
+      <td>Gibt die Länge einer angegebenen Zeichenfolge zurück</td>
+      <td>int</td>
+    </tr>
+    <tr>
+      <td><a href="#split">split()</a></td>
+      <td>Teilt eine Zeichenfolge in ein Array von Teilzeichenfolgen auf</td>
+      <td>String[]</td>
+    </tr>
+    <tr>
+      <td><a href="#toUppercase">toUpperCase()</a></td>
+      <td>Konvertiert eine Zeichenfolge in Großbuchstaben</td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><a href="#trim">trim()</a></td>
+      <td>Entfernt Leerzeichen an beiden Enden einer Zeichenfolge</td>
+      <td>String</td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+  <h3  id="length"> length() </h3>
+  <p>Diese Funktion gibt die länge eines Strings als int zurück, d.h. die Anzahl der Zeichen in dem String.
+  Sei String s1 = "Hallo!". Dann würde s1.length() den Wert 6 zurückgeben, da Hallo 5 Buchstaben hat und ist ! dann das 6. Zeichen ist.</p>
+  <h3 id="charAt"> charAt(char c1) </h3>
+  <p> Die Funktion gibt den char an der entsprechenden Stelle des Strings aus auf dem es angewendet wurde. Dabei wird das erste Zeichen im String
+  durch charAt(0) zurückgegeben. Sei wieder s1 = "Hallo!", dann würde s1.charAt(4) einen char mit dem Wert 'o' zurückgeben</p>
+  <h3 id="equals">equals(String s2) </h3>
+  <p>Die Methode equals vergleich den Inhalt des String auf dem es angewendet wird, mit einem anderen String, dem diese Methode als
+    Argument übergeben wird und gibt einen boolean zurück. Die Methode gibt true zurück, wenn die Strings die selbe Länge haben
+  und an jeder Stelle das gleiche Zeichen steht.
+  String s1 = "Hallo" String s2 = "Hallo". Diese Strings sind zwei unterschiedliche Objekte wie man leicht über s1==s2 feststellen kann.
+  Aber der Inhalt ist der selbe und daher wird s1.equals(s2) true zurückgeben.
+  </p>
+  <h3 id="indexOf">indexOf(String s2)</h3>
+  <p> Die Methode gibt die Stelle des ersten auftretens einer der Methode als Argument übergeben Zeichenfolge an in dem String an.
+    Seien String sequenceOfLetters = "Str" String s1 = "Strings sind cool!". Dann wird s1.indexOf(sequenceOfLetters) den Wert 0 zurückgeben,
+  welcher auch der Index ist ab dem die Zeichenkette zum ersten Mal auftritt.
+  Es wird ein -1 als Wert ausgegeben, wenn es keinen index gibt für den der match erfüllt ist. </p>
+  <h3 id="compareTo"> compareTo(String s2) </h3>
+  <p> Vergleicht den String auf dem es angewendet wird mit dem String welcher der Methode als Argument übergeben wird
+    nach der Lexikografischen Ordnung und gibt einen int-Wert zurück, welcher die Relation der Strings darstellt.
+    Zum Beispiel gibt einen negativen Wert aus, wenn der String auf dem das angewendet wird, nach der lexikografischen Ordnung vor dem String, welcher als Argument übergeben wird, kommen würde.
+  Sei String s1 = "abc" String s2 = "bcd", dann wird s1.compareTo(s2) einen negativen Wert ausgeben. In diesem Fall -1.
+  Sind die Strings vom Inhalt gleich, dann gibt Methode 0 als Wert zurück</p>
+  <h3 id="concat">concat(String s2)</h3>
+  <p>Diese Methode hängt den angegebenen String s2 an das aufrufende String-Objekt an. Sie gibt einen neuen String zurück, der die Verkettung des Originalstrings und von s2 repräsentiert.</p>
+  <h3 id="contains">contains(CharSequence sequence)</h3>
+  <p> Diese Methode überprüft, ob die Zeichenfolge (CharSequence) sequence in der aufrufenden Zeichenkette enthalten ist. Sie gibt true zurück, wenn die Zeichenfolge gefunden wird, andernfalls false  </p>
+  <h3 id="split"> split(String regex)</h3>
+  <p> Diese Methode teilt den String um Übereinstimmungen mit dem angegebenen regulären Ausdruck regex und gibt ein Array von Strings zurück. Der Originalstring bleibt unverändert.  </p>
+  <h3 id="trim">trim()</h3>
+  <p> Diese Methode gibt eine Kopie des Strings zurück, bei dem führende und abschließende Leerzeichen entfernt wurden. Der Originalstring wird dabei nicht verändert  </p>
+  <h3 id="toUppercase">toUppercase()</h3>
+  <p> Diese Methode gibt einen neuen String zurück, in dem alle Zeichen in Großbuchstaben konvertiert wurden. Der Originalstring wird dabei nicht verändert.  </p>
+</div>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
